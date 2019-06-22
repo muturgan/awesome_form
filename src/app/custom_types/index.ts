@@ -3,6 +3,7 @@ export interface IOneNestedLevelJson {
 }
 
 export interface IServerResponce {
+    isPost?: boolean;
     method: string;
     type: string;
     data: {[key: string]: string} | [];

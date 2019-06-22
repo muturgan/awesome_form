@@ -18,6 +18,7 @@ export class ModalComponent {
   public data: Array<[string, string]>;
   public method: string;
   public type: string;
+  public isPost: boolean | undefined;
 
   constructor (private _emitterService: EmitterService) {
     this._emitterService.error$.subscribe(
@@ -38,6 +39,8 @@ export class ModalComponent {
         this.type = payload.res ? payload.res.type : '';
 
         if (payload.res) {
+          this.isPost = payload.res.isPost;
+
           this.data = Array.isArray(payload.res.data)
             ? payload.res.data
             : Object.entries(payload.res.data);

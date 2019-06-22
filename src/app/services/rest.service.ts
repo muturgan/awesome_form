@@ -26,6 +26,10 @@ export class RestService {
                 res => {
                     const end = Number(new Date);
 
+                    if (res.body) {
+                        res.body.isPost = httpMethod === 'post';
+                    }
+
                     this._emitterService.dispatchFetchingSuccess(
                         end - start,
                         res.status,
