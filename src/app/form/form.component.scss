@@ -1,0 +1,26 @@
+.methos_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+
+  select {
+    margin-left: 10px;
+  }
+
+  input {
+    margin-right: 10px;
+  }
+}
+
+form {
+  margin-bottom: 10px;
+}
+
+.backlink {
+  margin: 0 0 -80px 0;
+}
+
+button {
+  width: 165px;
+}

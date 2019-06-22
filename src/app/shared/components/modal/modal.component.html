@@ -1,0 +1,51 @@
+<div
+    mdbModal
+    #modal="mdb-modal"
+    class="modal fade"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="myModalLabel"
+    aria-hidden="true"
+    >
+        <div [ngClass]="{'modal-success': success, 'modal-danger': !success}" class="modal-dialog modal-notify" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="heading lead">
+                        {{ message }}
+                    </p>
+                </div>
+
+                <div class="modal-body">
+                    <div *ngIf="success" class="text-left">
+                        <p>
+                            Время ответа сервера: {{ time }} миллисекунд.
+                        </p>
+                        <p>
+                            Код ответа сервера: {{ code }}.
+                        </p>
+                        <p>
+                            Полученные данные:
+                        </p>
+                        <ul *ngIf="data">
+                            <li>
+                                Метод: {{ method }}
+                            </li>
+                            <li>
+                                Тип: {{ type }} (обратите внимание, я не виноват что все время GET приходит)
+                            </li>
+                            <li *ngFor="let item of data">
+                                {{ item[0] }} : {{ item[1] }}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-outline-secondary-modal" data-dismiss="modal" (click)="modal.hide()" mdbWavesEffect>
+                        Ясненько...
+                    </button>
+                </div>
+
+            </div>
+        </div>
+</div>

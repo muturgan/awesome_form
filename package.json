@@ -1,0 +1,58 @@
+{
+  "name": "awesome_form",
+  "version": "0.1.0",
+  "description": "my test task for the ServiceCloud",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build --prod"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muturgan/awesome_form.git"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Andrey Sakharov",
+    "email": "caxap_8787@mail.ru"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/muturgan/awesome_form/issues"
+  },
+  "homepage": "https://github.com/muturgan/awesome_form#readme",
+  "dependencies": {
+    "@angular/animations": "^7.2.15",
+    "@angular/common": "^7.2.15",
+    "@angular/compiler": "^7.2.15",
+    "@angular/core": "^7.2.15",
+    "@angular/forms": "^7.2.15",
+    "@angular/http": "^7.2.15",
+    "@angular/material": "^7.3.7",
+    "@angular/platform-browser": "^7.2.15",
+    "@angular/platform-browser-dynamic": "^7.2.15",
+    "@angular/router": "^7.2.15",
+    "@fortawesome/fontawesome-free": "^5.6.3",
+    "angular-bootstrap-md": "^7.5.4",
+    "angular-calendar": "^0.27.11",
+    "chart.js": "^2.7.2",
+    "core-js": "^2.6.9",
+    "rxjs": "^6.5.2",
+    "zone.js": "^0.8.26"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^0.13.9",
+    "@angular/cli": "^7.3.9",
+    "@angular/compiler-cli": "^7.2.15",
+    "@angular/language-service": "^7.2.15",
+    "codelyzer": "^5.1.0",
+    "tslint": "^5.16.0",
+    "typescript": "3.2.4"
+  }
+}

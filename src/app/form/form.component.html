@@ -1,0 +1,104 @@
+<app-modal></app-modal>
+
+<button
+    routerLink="/dashboard"
+    type="button"
+    class="btn btn-primary waves-light backlink"
+    mdbWavesEffect
+    >
+        Вернуться на главную
+</button>
+
+<div class="row mt-5 fillit">
+
+    <div class="col-md-12">
+
+        <div class="card card-cascade narrower mt-5">
+
+            <div class="view gradient-card-header blue darken-2">
+                <h4 class="h4-responsive text-white">
+                    Та самая форма
+                </h4>
+            </div>
+
+            <div class="card-body">
+
+                <form [formGroup]="formGroup" class="text-center border border-light p-5">
+
+                    <div class="methos_wrapper">
+
+                        <input
+                            type="text"
+                            formControlName="methodControl"
+                            pattern="^[a-zA-Z]+$"
+                            mdbInput
+                            class="form-control mb-4"
+                            placeholder="Query-параметр 'method'"
+                            [mdbTooltip]="methodTooltipContent"
+                            placement="top"
+                            #methodTooltip="mdb-tooltip"
+                            triggers=""
+                        >                        
+    
+                        <select formControlName="selectControl" class="browser-default custom-select mb-4">
+                            <option value="" disabled>
+                                Выберите метод http запроса
+                            </option>
+                            <option value="get">GET</option>
+                            <option value="post">POST</option>
+                        </select>
+
+                    </div>
+
+                    <input
+                        type="text"
+                        formControlName="dataControl"
+                        mdbInput
+                        class="form-control mb-4"
+                        placeholder="Введите строку в формате JSON"
+                        [mdbTooltip]="dataTooltipContent"
+                        placement="left"
+                        #dataTooltip="mdb-tooltip"
+                        triggers=""
+                    >
+
+                    <button
+                        mdbBtn
+                        mdbWavesEffect
+                        color="indigo"
+                        type="button"
+                        [disabled]="isButtonDisabled || isLoading"
+                        (click)="submit();"
+                        >
+                            <span *ngIf="isLoading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                            {{ isLoading ? 'Загрузка...' : 'Отправить' }}
+                    </button>
+
+                </form>
+
+                <h6>
+                    Примеры строки в формате JSON (для быстрого копирования и вставки):
+                </h6>
+
+                <ul>
+                    <li>
+                        Валидный JSON: <b>{{'{"foo": "bar"}'}}</b>
+                    </li>
+                    <li>
+                        Валидный JSON: <b>{{'{"foo": 125}'}}</b>
+                    </li>
+                    <li>
+                        Валидный JSON: <b>{{'{"foo": false}'}}</b>
+                    </li>
+                    <li>
+                        Невалидный JSON: <b>{{'{"foo": "bar}'}}</b>
+                    </li>
+                    <li>
+                        Валидный JSON c вложенностью больше 1: <b>{{'{"foo": {"bar": 15} }'}}</b>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</div>
