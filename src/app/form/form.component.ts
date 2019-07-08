@@ -13,8 +13,8 @@ import { IOneNestedLevelJson } from '../custom_types';
 })
 export class FormComponent {
 
-  @ViewChild('methodTooltip') public methodTooltip: TooltipDirective;
-  @ViewChild('dataTooltip') public dataTooltip: TooltipDirective;
+  @ViewChild('methodTooltip', { static: false }) public methodTooltip: TooltipDirective;
+  @ViewChild('dataTooltip', { static: false }) public dataTooltip: TooltipDirective;
 
   public isButtonDisabled = true;
   public isLoading = false;

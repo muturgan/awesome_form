@@ -6,7 +6,7 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
   styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent {
-  @ViewChild('sidenav') sidenav: ElementRef;
+  @ViewChild('sidenav', { static: false }) sidenav: ElementRef;
 
   clicked: boolean;
 
