@@ -1,4 +1,4 @@
-import { FormComponent } from './form/form.component';
+import { FormComponent } from './views/form/form.component';
 import { RouterModule, Route } from '@angular/router';
 import { ModuleWithProviders } from '@angular/core';
 import { NotFoundComponent } from './views/errors/not-found/not-found.component';

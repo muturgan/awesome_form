@@ -3,8 +3,8 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { TooltipDirective } from 'angular-bootstrap-md';
 import { timer } from 'rxjs';
 import { debounce, filter } from 'rxjs/operators';
-import { RestService } from '../services/rest.service';
-import { IOneNestedLevelJson } from '../custom_types';
+import { RestService } from '../../services/rest.service';
+import { IOneNestedLevelJson } from '../../custom_types';
 
 @Component({
   selector: 'app-form',

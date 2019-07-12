@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { EmitterService } from '../../../services/emitter.service';
+import { EmitterService } from '../../services/emitter.service';
 import { ModalDirective } from 'angular-bootstrap-md';
 
 @Component({
