@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormComponent } from './form.component';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 @NgModule({
   imports: [
@@ -14,6 +15,7 @@ import { FormComponent } from './form.component';
     ReactiveFormsModule,
     BrowserModule,
     BrowserAnimationsModule,
+    MDBBootstrapModule.forRoot(),
   ],
   declarations: [
     FormComponent,
